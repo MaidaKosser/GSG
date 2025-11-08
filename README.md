@@ -7,14 +7,12 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![AOS](https://img.shields.io/badge/AOS-Animation-orange?style=flat)](https://michalsnik.github.io/aos/)
 
----
 
 ## Description
 
 **Government School System Website (React Version)** is a **modern, responsive frontend** built using **React + Vite** to represent a government girls’ school system.  
 This project aims to bring a **realistic online presence** to schools that lack digital representation featuring home, vision & mission, subjects, and contact page. It provides pages for **Student and Faculty**, while also demonstrating **Local Storage-based data persistence** — allowing form data and school information to be saved locally. This React version enhances the previous HTML/Bootstrap project with component-based architecture and reusable UI logic.
 
----
 
 ## Features
 
@@ -27,7 +25,6 @@ This project aims to bring a **realistic online presence** to schools that lack 
 - Clean and light UI theme for better readability  
 - **Reusable cards and sections** for subjects & vision statements  
 
----
 
 ## Technologies Used
 
@@ -39,13 +36,12 @@ This project aims to bring a **realistic online presence** to schools that lack 
 - **Local Storage API**
 - **CSS3 / Flexbox / Grid**
 
----
 
 ## Live Preview: 
 
 https://drive.google.com/file/d/1GvXLcnYrqibTLYvPZLwTiFfuJAihqcSe/view?usp=drivesdk
 
----
+
 
 ### 1️⃣ Clone the Repository
 ```bash
@@ -77,9 +73,20 @@ npm run dev
 - Focused on a practical UI/UX for Government Girls’ Schools
 - Aimed to modernize Government School Websites From Manual System
 
----
 
-📸 Screenshots
-(Add screenshots in a /screenshots folder and embed them here later)
+## Screenshots
+
+- Login
+  
+![Login](https://github.com/MaidaKosser/GSG/blob/main/Login.png)
+
+- Home
+  
+![Home](https://github.com/MaidaKosser/GSG/blob/main/Home.png)
+
+- Admin Dashboard
+  
+![Admin](https://github.com/MaidaKosser/GSG/blob/main/Admin.png)
+
 
 
