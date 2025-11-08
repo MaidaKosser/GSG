@@ -30,7 +30,27 @@ const FacultyTable = ({ teachers, updateTeacher, deleteTeacher, tableHeadColor }
         <tbody>
           {teachers.length ? teachers.map((t) => (
             <tr key={t.id}>
-              <td>{editId===t.id ? <input value={editData.image} onChange={(e)=>setEditData({...editData,image:e.target.value})} /> : t.image ? <img src={t.image} alt={t.name} style={{width:"60px",height:"60px",objectFit:"cover"}} className="rounded-circle" /> : "No Image"}</td>
+              <td>{editId === t.id ? (<><input type="file" accept="image/*" onChange={(e) => {
+                        const file = e.target.files[0];
+                        if (file) {
+                          const reader = new FileReader();
+                          reader.onloadend = () => {
+                            setEditData({ ...editData, image: reader.result }); // base64 image data
+                          };
+                          reader.readAsDataURL(file);
+                        }
+                      }}
+                    />
+                    {editData.image && (
+                      <img
+                        src={editData.image}
+                        alt="Preview"
+                        style={{ width: "60px", height: "60px", objectFit: "cover", borderRadius: "50%", marginTop: "5px",
+                        }}
+                      />
+                    )}
+                  </>
+                ) : t.image ? (<img src={t.image} alt={t.name} style={{ width: "60px", height: "60px", objectFit: "cover" }} className="rounded-circle"/>) : ("Edit Image")}</td>
               <td>{editId===t.id ? <input value={editData.name} onChange={(e)=>setEditData({...editData,name:e.target.value})}/> : t.name}</td>
               <td>{editId===t.id ? <input value={editData.subject} onChange={(e)=>setEditData({...editData,subject:e.target.value})}/> : t.subject}</td>
               <td>{editId===t.id ? <input value={editData.bio} onChange={(e)=>setEditData({...editData,bio:e.target.value})}/> : t.bio}</td>

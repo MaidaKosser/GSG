@@ -41,13 +41,13 @@ const StudentTable = ({ students, updateStudent, deleteStudent, tableHeadColor }
               <td>{editId === s.id ? <input value={editData.address} onChange={(e) => setEditData({...editData, address:e.target.value})} /> : s.address}</td>
               <td>
                 {editId === s.id ? (
-                  <select value={editData.status} onChange={(e) => setEditData({...editData, status:e.target.value})}>
+                  <select value={editData.status || "Pending"} onChange={(e) => setEditData({...editData, status:e.target.value})}>
                     <option value="Pending">Pending</option>
                     <option value="Accepted">Accepted</option>
                     <option value="Rejected">Rejected</option>
                   </select>
                 ) : (
-                  <span className={`badge ${s.status==="Accepted"?"bg-success":s.status==="Rejected"?"bg-danger":"bg-secondary"}`}>{s.status}</span>
+                  <span className={`badge ${s.status==="Accepted"?"bg-success":s.status==="Rejected"?"bg-danger":"bg-secondary"}`}>{s.status || "Pending"}</span>
                 )}
               </td>
               <td className="d-flex justify-content-center flex-wrap gap-1">

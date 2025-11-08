@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Button from "./Button";
 import Heading from "./Heading";
 
-export default function FacultyForm({ onSubmit, closeModal }) {
+export default function FacultyForm({ onSubmit, closeModal, setTeachers }) {
   const [preview, setPreview] = useState(null);
 
   const validationSchema = Yup.object({
@@ -28,7 +28,7 @@ export default function FacultyForm({ onSubmit, closeModal }) {
       },
     });
 
-  // Resize image before saving
+  // 🖼 Resize image before saving
   const resizeImage = (file, maxWidth = 300, maxHeight = 300) =>
     new Promise((resolve) => {
       const reader = new FileReader();
@@ -83,13 +83,21 @@ export default function FacultyForm({ onSubmit, closeModal }) {
 
           const newTeacher = { ...values, id: Date.now(), image: imageData };
 
-          // ✅ Save to localStorage
+          // ✅ Get old teachers from localStorage
           const storedTeachers =
             JSON.parse(localStorage.getItem("teachers")) || [];
           const updatedTeachers = [...storedTeachers, newTeacher];
+
+          // ✅ Update localStorage
           localStorage.setItem("teachers", JSON.stringify(updatedTeachers));
 
-          // ✅ Update parent table
+          // ✅ Update state on both sides instantly
+          if (setTeachers) setTeachers(updatedTeachers);
+
+          // ✅ Notify all open tabs/pages (Home + Admin)
+          window.dispatchEvent(new Event("storage"));
+
+          // ✅ Trigger custom onSubmit (optional)
           if (onSubmit) onSubmit(newTeacher);
 
           resetForm();

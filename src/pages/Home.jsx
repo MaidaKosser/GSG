@@ -130,7 +130,7 @@ export default function Home() {
                     <p className="card-text text-secondary mb-1">
                       <strong>Subject:</strong> {t.subject}
                     </p>
-                    <p className="text-muted small">{t.bio}</p>
+                    <p className="text-muted medium p-3">{t.bio}</p>
                   </div>
                 </div>
               </div>
