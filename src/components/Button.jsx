@@ -7,7 +7,7 @@ export default function Button({
   type = "button",
   bg = "var(--primary-color, #6b1414e6)",
   color = "#fff",
-  hoverBg = "#8b1a1aea", // slightly lighter maroon
+  hoverBg = "#8b1a1aea", 
   shadow = true,
 }) {
   const [hovered, setHovered] = useState(false);
@@ -18,7 +18,7 @@ export default function Button({
     padding: "0.75rem 1.6rem",
     borderRadius: "30px",
     fontWeight: 600,
-    border: "none", // removed border
+    border: "none", 
     cursor: "pointer",
     textDecoration: "none",
     transition: "all 0.3s ease",

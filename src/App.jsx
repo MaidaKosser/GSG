@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 export default function App() {
   const [userRole, setUserRole] = useState(localStorage.getItem("userRole"));
 
-  // Listen for changes in localStorage (like after login)
   useEffect(() => {
     const handleStorageChange = () => {
       setUserRole(localStorage.getItem("userRole"));
@@ -20,16 +19,8 @@ export default function App() {
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/" element={<Navigate to="/login" />} />
-
-      <Route
-        path="/admin"
-        element={userRole === "admin" ? <AdminDashboard /> : <Navigate to="/login" />}
-      />
-
-      <Route
-        path="/home"
-        element={userRole ? <Home /> : <Navigate to="/login" />}
-      />
+      <Route path="/admin" element={userRole === "admin" ? <AdminDashboard /> : <Navigate to="/login" />}/>
+      <Route path="/home" element={userRole ? <Home /> : <Navigate to="/login" />}/>
     </Routes>
   );
 }

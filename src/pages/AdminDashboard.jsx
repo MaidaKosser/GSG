@@ -118,12 +118,7 @@ export default function AdminDashboard({ setUserRole }) {
         <Button label="Add Student" bg="#800000" hoverBg="#a00000" color="#fff" onClick={() => setShowStudentModal(true)} />
       </div>
 
-      <StudentTable
-        students={students}
-        updateStudent={updateStudent}
-        deleteStudent={deleteStudent}
-        tableHeadColor="#800000"
-      />
+      <StudentTable students={students} updateStudent={updateStudent} deleteStudent={deleteStudent} tableHeadColor="#800000"/>
 
       {/* Faculty Management */}
       <div style={{ marginTop: "80px" }}>
@@ -132,12 +127,7 @@ export default function AdminDashboard({ setUserRole }) {
           <Button label="Add Faculty" bg="#800000" hoverBg="#a00000" color="#fff" onClick={() => setShowFacultyModal(true)} />
         </div>
 
-        <FacultyTable
-          teachers={teachers}
-          updateTeacher={updateTeacher}
-          deleteTeacher={deleteTeacher}
-          tableHeadColor="#800000"
-        />
+        <FacultyTable teachers={teachers} updateTeacher={updateTeacher} deleteTeacher={deleteTeacher} tableHeadColor="#800000"/>
       </div>
 
       {/* Modals */}

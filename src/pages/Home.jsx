@@ -8,8 +8,8 @@ import AdmissionForm from "../components/AdmissionForm";
 import Button from "../components/Button";
 import FacultyForm from "../components/FacultyForm";
 import "../styles/style.css";
-import logo from "../assets/images/darkLogo.png";
-import useLocalData from "../hooks/useLocalData"; // ✅ correct hook name
+import logo from "../../public/images/darkLogo.png";
+import useLocalData from "../hooks/useLocalData"; 
 
 export default function Home() {
   const { students, setStudents, teachers, setTeachers } = useLocalData();
@@ -81,12 +81,11 @@ export default function Home() {
         )}
       </section>
 
-      {/* 👨‍🏫 Faculty Section */}
+      {/* Faculty Section */}
       <section
         id="faculty-section"
         style={{ backgroundColor: "#f9f2ebff" }}
-        className="mt-5 py-5 px-4"
-      >
+        className="mt-5 py-5 px-4">
         <div className="text-center mb-5">
           <Heading title="Our Faculty" className="text-maroon" />
           <p className="text-secondary fs-5 mx-auto" style={{ maxWidth: "700px" }}>

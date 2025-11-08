@@ -1,4 +1,4 @@
-// ✅ ---------- STUDENTS ----------
+// ---------- STUDENTS ----------
 export const getStudents = () => {
   try {
     return JSON.parse(localStorage.getItem("students")) || [];
@@ -26,7 +26,7 @@ export const updateStudentStatus = (id, newStatus) => {
   saveStudents(students);
 };
 
-// ✅ ---------- TEACHERS ----------
+// ---------- TEACHERS ----------
 export const getTeachers = () => {
   try {
     return JSON.parse(localStorage.getItem("teachers")) || [];
@@ -47,7 +47,7 @@ export const saveTeacher = (teacher) => {
   return newTeacher;
 };
 
-// ✅ ---------- AUTH ----------
+// ---------- Login ----------
 export const saveUser = (user) => {
   localStorage.setItem("loggedUser", JSON.stringify(user));
   localStorage.setItem("userRole", user.role || "admin");
@@ -65,7 +65,7 @@ export const getUserRole = () => {
   return localStorage.getItem("userRole") || null;
 };
 
-// ✅ Only clear login info, not teachers/students
+// Only clear login info, not teachers/students
 export const handleLogout = (navigate) => {
   localStorage.removeItem("loggedUser");
   localStorage.removeItem("userRole");

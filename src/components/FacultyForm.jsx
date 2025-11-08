@@ -83,21 +83,21 @@ export default function FacultyForm({ onSubmit, closeModal, setTeachers }) {
 
           const newTeacher = { ...values, id: Date.now(), image: imageData };
 
-          // ✅ Get old teachers from localStorage
+          // Get old teachers from localStorage
           const storedTeachers =
             JSON.parse(localStorage.getItem("teachers")) || [];
           const updatedTeachers = [...storedTeachers, newTeacher];
 
-          // ✅ Update localStorage
+          // Update localStorage
           localStorage.setItem("teachers", JSON.stringify(updatedTeachers));
 
-          // ✅ Update state on both sides instantly
+          // Update state on both sides instantly
           if (setTeachers) setTeachers(updatedTeachers);
 
-          // ✅ Notify all open tabs/pages (Home + Admin)
+          // Notify all open tabs/pages (Home + Admin)
           window.dispatchEvent(new Event("storage"));
 
-          // ✅ Trigger custom onSubmit (optional)
+          // Trigger custom onSubmit (optional)
           if (onSubmit) onSubmit(newTeacher);
 
           resetForm();

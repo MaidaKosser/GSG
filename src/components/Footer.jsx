@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/style.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import logo from '../assets/images/lightLogo.png'
+import logo from '../../public/images/lightLogo.png'
 export default function Footer() {
   return (
 <section id="contact" className="vision-section">

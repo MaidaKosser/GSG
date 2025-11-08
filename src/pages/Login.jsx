@@ -48,14 +48,12 @@ export default function Login() {
       <div className="login-box p-4 p-md-5 shadow-lg rounded-4 bg-white">
         <Heading
           title="Login"
-          className="text-center text-maroon fw-bold mb-4"
-        />
+          className="text-center text-maroon fw-bold mb-4"/>
 
         <Formik
           initialValues={{ email: "", password: "" }}
           validationSchema={validationSchema}
-          onSubmit={handleLogin}
-        >
+          onSubmit={handleLogin}>
           {() => (
             <Form>
               <div className="mb-3">

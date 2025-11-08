@@ -74,8 +74,7 @@ export default function AdmissionForm({ onSubmit, onClose }) {
                 <ErrorMessage
                   name="fullName"
                   component="div"
-                  className="text-danger small"
-                />
+                  className="text-danger small"/>
               </div>
               <div className="col-md-6 mb-3">
                 <label className="form-label fw-bold">Father Name</label>
@@ -83,8 +82,7 @@ export default function AdmissionForm({ onSubmit, onClose }) {
                 <ErrorMessage
                   name="fatherName"
                   component="div"
-                  className="text-danger small"
-                />
+                  className="text-danger small"/>
               </div>
             </div>
 

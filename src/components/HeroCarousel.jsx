@@ -3,9 +3,9 @@ import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-import slide1 from "../assets/images/carousalImage1.jpg";
-import slide2 from "../assets/images/carousalImage2.jpg";
-import slide3 from "../assets/images/carousalImage3.jpg";
+import slide1 from "../../public/images/carousalImage2.jpg";
+import slide2 from "../../public/images/carousalImage2.jpg";
+import slide3 from "../../public/images/carousalImage3.jpg";
 
 import "../styles/style.css";
 

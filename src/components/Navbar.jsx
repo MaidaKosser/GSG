@@ -2,7 +2,7 @@ import React, { useEffect, useState, useMemo } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../styles/style.css";
-import logo from "../assets/images/lightLogo.png";
+import logo from "../../public/images/lightLogo.png";
 import Button from "../components/Button"; 
 import { useNavigate } from "react-router-dom";
 
