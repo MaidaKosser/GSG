@@ -78,16 +78,14 @@ npm run dev
 
 - Login
   
-![Login](https://github.com/MaidaKosser/GSG/blob/main/Login.png)
+![Login](https://github.com/MaidaKosser/GSG/blob/main/public/Login.png)
 
 - Home
   
-![Home](https://github.com/MaidaKosser/GSG/blob/main/Home.png)
+![Home](https://github.com/MaidaKosser/GSG/blob/main/public/Home.png)
 
 - Admin Dashboard
   
-![Admin](https://github.com/MaidaKosser/GSG/blob/main/Admin.png)
+![Admin](https://github.com/MaidaKosser/GSG/blob/main/public/Admin.png)
 
 
-
-"# GSG" 
